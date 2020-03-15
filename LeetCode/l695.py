@@ -28,10 +28,21 @@ from typing import List
 链接：https://leetcode-cn.com/problems/max-area-of-island
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
+"""
+    记录(i,j)的位置，并且替换
+"""
 
 
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        def cp(d, dl, dt, grid):
+            for di in d[dt]:
+                grid[di[0]][di[1]] = dl
+                d[dl].append(di)
+            grid[i][j] = dl
+            d[dl].append((i, j))
+            d[dt].clear()
+
         d = [[] for _ in range(0, len(grid) * len(grid[0]) + 1)]
         k = 1
         for i in range(0, len(grid)):
@@ -48,19 +59,9 @@ class Solution:
                             d[dt].append((i, j))
                         else:
                             if dl > 0:
-                                for di in d[dt]:
-                                    grid[di[0]][di[1]] = dl
-                                    d[dl].append(di)
-                                grid[i][j] = dl
-                                d[dl].append((i, j))
-                                d[dt].clear()
+                                cp(d, dl, dt, grid)
                             else:
-                                for di in d[dl]:
-                                    grid[di[0]][di[1]] = dt
-                                    d[dt].append(di)
-                                grid[i][j] = dt
-                                d[dt].append((i, j))
-                                d[dl].clear()
+                                cp(d, dt, dl, grid)
                     else:
                         d[k].append((i, j))
                         grid[i][j] = k
