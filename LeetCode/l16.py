@@ -14,7 +14,7 @@ from typing import List
 
 
 class Solution:
-    def threeSumClosest(self, nums: List[int], target: int) -> int:
+    def threeSumClosest1(self, nums: List[int], target: int) -> int:
         m = abs(nums[0] + nums[1] + nums[2] - target)
         m1, m2, m3 = nums[0], nums[1], nums[2]
         s = set()
@@ -31,38 +31,47 @@ class Solution:
                             break
         return m1 + m2 + m3
 
-    def threeSumClosest1(self, nums: List[int], target: int) -> int:
-        exi = [-1, -1, -1]
-        f = target * -1
-        g = 0
-        for j in range(0, 3):
-            n = True
-            for i in range(0, len(nums)):
-                if i in exi:
-                    continue
-                if abs(nums[i] + f) < abs(g) or n:
-                    n = False
-                    g = nums[i] + f
-                    exi[j] = i
-            f = g
-        print(exi)
-        return f + target
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
+        nums = sorted(nums)
+
+        mm = 100000
+        for j in range(0, len(nums) - 1):
+            i, k = j + 1, len(nums) - 1
+            d = nums[i] + nums[j] + nums[k] - target
+            while True:
+                ds = 1 if d < 0 else -1
+                nj = nk = ni = nums[i] + nums[j] + nums[k] - target
+                mj = mk = mi = False
+                if 0 <= i + ds < j:
+                    ni = nums[i + ds] + nums[j] + nums[k] - target
+                    mi = True
+                if i < j + ds < k:
+                    nj = nums[i] + nums[j + ds] + nums[k] - target
+                    mj = True
+                if j < k + ds < len(nums):
+                    nk = nums[i] + nums[j] + nums[k + ds] - target
+                    mk = True
+                if abs(nk) <= abs(ni) and abs(nk) <= abs(nj) and mk:
+                    k += ds
+                elif abs(nj) <= abs(ni) and abs(nj) <= abs(nk) and mj:
+                    j += ds
+                elif abs(ni) <= abs(nj) and abs(ni) <= abs(nk) and mi:
+                    i += ds
+                if abs(d) <= abs(nums[i] + nums[j] + nums[k] - target):
+                    break
+                d = nums[i] + nums[j] + nums[k] - target
+                if abs(d) < abs(mm):
+                    mm = d
+        return mm
 
 
 if __name__ == '__main__':
-    nums = [13, 34, 8, 91, 0, -47, 52, 23, 76, 14, 0, -9, 22, 49, -1, 68, 49, -83, -34, 5, 38, 3, 47, -2, -73, -29, 19,
-            -4, -3, -16, 89, 52, 18, 27, 40, 88, -84, -68, 84, 53, 52, 28, -86, -80, 18, -93, 11, 77, 11, -83, 69, -29,
-            -26, -83, 32, 65, -49, -88, -24, -56, 95, -82, -25, -69, -27, 20, -87, -49, 78, 89, 100, 26, 45, -15, 47,
-            77, 86, 46, 82, -80, -31, 72, -82, -63, -50, 35, -36, -30, -40, 82, 83, -61, -49, -11, 88, 73, -23, 2, 63,
-            29, -82, 95, -91, 31, -35, -84, 37, -86, -17, -84, -54, -89, 32, 13, -21, 73, -73, 53, -57, -60, 62, -43,
-            54, 52, 91, -7, 23, -53, 53, -82, -75, 43, 21, 76, 45, -2, -46, -39, -39, -3, 24, 6, -73, 34, 58, -67, 35,
-            45, -72, -67, -57, -22, -81, 68, -84, -15, 14, -87, 14, -45, -68, 4, -88, -25, -36, -74, -27, 27, -23, 26,
-            -99, -47, 97, 32, 53, 82, -89, 91, -1, -67, -74, -97, -36, 7, -51, -100, -74, 28, -12, -46, -37, 87, 80,
-            -33, -58, 51, 5]
-    nums = [0, 2, 1, -3]
+    nums = [-4, -1, 1, 2]
     target = 1
-    import time
-
-    start = time.time()
-    print(Solution().threeSumClosest1(nums, target))
-    print(time.time() - start)
+    print(Solution().threeSumClosest(nums, target))  # 2
+    # nums = [1, 1, -1, -1, 3]
+    # target = 1
+    # print(Solution().threeSumClosest(nums, target))  # 1
+    # nums = [-1, 0, 1, 2, -1, -4]
+    # target = 0
+    # print(Solution().threeSumClosest(nums, target))  # 0
