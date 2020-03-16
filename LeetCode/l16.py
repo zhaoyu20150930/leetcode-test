@@ -33,35 +33,18 @@ class Solution:
 
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums = sorted(nums)
-
-        mm = 100000
+        mm = float('inf')
         for j in range(0, len(nums) - 1):
-            i, k = j + 1, len(nums) - 1
-            d = nums[i] + nums[j] + nums[k] - target
-            while True:
-                ds = 1 if d < 0 else -1
-                nj = nk = ni = nums[i] + nums[j] + nums[k] - target
-                mj = mk = mi = False
-                if 0 <= i + ds < j:
-                    ni = nums[i + ds] + nums[j] + nums[k] - target
-                    mi = True
-                if i < j + ds < k:
-                    nj = nums[i] + nums[j + ds] + nums[k] - target
-                    mj = True
-                if j < k + ds < len(nums):
-                    nk = nums[i] + nums[j] + nums[k + ds] - target
-                    mk = True
-                if abs(nk) <= abs(ni) and abs(nk) <= abs(nj) and mk:
-                    k += ds
-                elif abs(nj) <= abs(ni) and abs(nj) <= abs(nk) and mj:
-                    j += ds
-                elif abs(ni) <= abs(nj) and abs(ni) <= abs(nk) and mi:
-                    i += ds
-                if abs(d) <= abs(nums[i] + nums[j] + nums[k] - target):
-                    break
-                d = nums[i] + nums[j] + nums[k] - target
-                if abs(d) < abs(mm):
-                    mm = d
+            i = j + 1
+            k = len(nums) - 1
+            while i < k:
+                t = nums[i] + nums[j] + nums[k]
+                if t < target:
+                    i += 1
+                else:
+                    k -= 1
+                if abs(t - target) < abs(mm - target):
+                    mm = t
         return mm
 
 
@@ -69,9 +52,9 @@ if __name__ == '__main__':
     nums = [-4, -1, 1, 2]
     target = 1
     print(Solution().threeSumClosest(nums, target))  # 2
-    # nums = [1, 1, -1, -1, 3]
-    # target = 1
-    # print(Solution().threeSumClosest(nums, target))  # 1
-    # nums = [-1, 0, 1, 2, -1, -4]
-    # target = 0
-    # print(Solution().threeSumClosest(nums, target))  # 0
+    nums = [1, 1, -1, -1, 3]
+    target = 1
+    print(Solution().threeSumClosest(nums, target))  # 1
+    nums = [-1, 0, 1, 2, -1, -4]
+    target = 0
+    print(Solution().threeSumClosest(nums, target))  # 0
