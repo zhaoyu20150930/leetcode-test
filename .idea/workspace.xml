@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fda862e1-b9d7-4f42-a27d-3db01122c625" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CLRS/Graph/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CLRS/Graph/basic.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LeetCode/l365.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/l4.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/l4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
       <recent name="C:\Users\zhaoy\PycharmProjects\leetcode-test\LeetCode" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.l4">
+  <component name="RunManager" selected="Python.l365">
     <configuration name="HEAPQ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="leetcode-test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -55,6 +53,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CLRS/HEAPQ.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="l365" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leetcode-test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/l365.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -107,28 +127,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="l863" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="leetcode-test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/l863.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="v40" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="leetcode-test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.l365" />
         <item itemvalue="Python.l4" />
         <item itemvalue="Python.v40" />
         <item itemvalue="Python.HEAPQ" />
         <item itemvalue="Python.l409" />
-        <item itemvalue="Python.l863" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +194,8 @@
       <workItem from="1584407543826" duration="16000" />
       <workItem from="1584493363302" duration="36161000" />
       <workItem from="1584578936210" duration="2994000" />
-      <workItem from="1584665862347" duration="22204000" />
+      <workItem from="1584665862347" duration="22778000" />
+      <workItem from="1584751580631" duration="11140000" />
     </task>
     <task id="LOCAL-00001" summary="ddddddddd">
       <created>1583402959112</created>
@@ -310,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584671813543</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ddddddddd">
+      <created>1584722631604</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1584722631604</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,75 +331,75 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="841" y="472" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1583371780107" />
-    <state x="1109" y="313" width="489" height="580" key="#xdebugger.evaluate" timestamp="1584717631281">
+    <state x="1109" y="313" width="489" height="580" key="#xdebugger.evaluate" timestamp="1584796058637">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="1109" y="313" width="489" height="580" key="#xdebugger.evaluate/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584717631281" />
+    <state x="1109" y="313" width="489" height="580" key="#xdebugger.evaluate/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584796058637" />
     <state x="524" y="120" key="#xdebugger.evaluate/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582421988494" />
-    <state x="641" y="154" key="CommitChangelistDialog2" timestamp="1584671812676">
+    <state x="641" y="154" key="CommitChangelistDialog2" timestamp="1584722630976">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="641" y="154" key="CommitChangelistDialog2/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584671812676" />
+    <state x="641" y="154" key="CommitChangelistDialog2/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722630976" />
     <state width="1328" height="466" key="DebuggerActiveHint" timestamp="1584671055375">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1328" height="466" key="DebuggerActiveHint/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584671055375" />
-    <state width="2005" height="225" key="GridCell.Tab.0.bottom" timestamp="1584722246303">
+    <state width="2005" height="225" key="GridCell.Tab.0.bottom" timestamp="1584801624914">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="225" key="GridCell.Tab.0.bottom/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722246303" />
+    <state width="2005" height="225" key="GridCell.Tab.0.bottom/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801624914" />
     <state width="1493" height="183" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434686147" />
-    <state width="2005" height="225" key="GridCell.Tab.0.center" timestamp="1584722246303">
+    <state width="2005" height="225" key="GridCell.Tab.0.center" timestamp="1584801624914">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="225" key="GridCell.Tab.0.center/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722246303" />
+    <state width="2005" height="225" key="GridCell.Tab.0.center/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801624914" />
     <state width="1493" height="183" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434686147" />
-    <state width="2005" height="225" key="GridCell.Tab.0.left" timestamp="1584722246303">
+    <state width="2005" height="225" key="GridCell.Tab.0.left" timestamp="1584801624914">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="225" key="GridCell.Tab.0.left/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722246303" />
+    <state width="2005" height="225" key="GridCell.Tab.0.left/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801624914" />
     <state width="1493" height="183" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434686147" />
-    <state width="2005" height="225" key="GridCell.Tab.0.right" timestamp="1584722246303">
+    <state width="2005" height="225" key="GridCell.Tab.0.right" timestamp="1584801624914">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="225" key="GridCell.Tab.0.right/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722246303" />
+    <state width="2005" height="225" key="GridCell.Tab.0.right/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801624914" />
     <state width="1493" height="183" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434686147" />
-    <state width="2005" height="281" key="GridCell.Tab.1.bottom" timestamp="1584722165570">
+    <state width="2005" height="281" key="GridCell.Tab.1.bottom" timestamp="1584801073816">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="281" key="GridCell.Tab.1.bottom/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722165570" />
+    <state width="2005" height="281" key="GridCell.Tab.1.bottom/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801073816" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434216456" />
-    <state width="2005" height="281" key="GridCell.Tab.1.center" timestamp="1584722165570">
+    <state width="2005" height="281" key="GridCell.Tab.1.center" timestamp="1584801073816">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="281" key="GridCell.Tab.1.center/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722165570" />
+    <state width="2005" height="281" key="GridCell.Tab.1.center/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801073816" />
     <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434216456" />
-    <state width="2005" height="281" key="GridCell.Tab.1.left" timestamp="1584722165570">
+    <state width="2005" height="281" key="GridCell.Tab.1.left" timestamp="1584801073816">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="281" key="GridCell.Tab.1.left/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722165570" />
+    <state width="2005" height="281" key="GridCell.Tab.1.left/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801073816" />
     <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434216456" />
-    <state width="2005" height="281" key="GridCell.Tab.1.right" timestamp="1584722165570">
+    <state width="2005" height="281" key="GridCell.Tab.1.right" timestamp="1584801073816">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="281" key="GridCell.Tab.1.right/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722165570" />
+    <state width="2005" height="281" key="GridCell.Tab.1.right/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584801073816" />
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582434216456" />
     <state x="528" y="201" key="SettingsEditor" timestamp="1584022521409">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="528" y="201" key="SettingsEditor/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584022521409" />
-    <state x="617" y="292" key="Vcs.Push.Dialog.v2" timestamp="1584671814888">
+    <state x="617" y="292" key="Vcs.Push.Dialog.v2" timestamp="1584722639626">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="292" key="Vcs.Push.Dialog.v2/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584671814888" />
+    <state x="617" y="292" key="Vcs.Push.Dialog.v2/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584722639626" />
     <state x="93" y="93" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584721775239">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="93" y="93" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584721775239" />
-    <state x="717" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1584665880128">
+    <state x="717" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1584751581824">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="717" y="384" key="com.intellij.ide.util.TipDialog/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584665880128" />
+    <state x="717" y="384" key="com.intellij.ide.util.TipDialog/-1920.0.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1584751581824" />
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1584530491418">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -407,6 +413,7 @@
     <SUITE FILE_PATH="coverage/leetcode_test$l4.coverage" NAME="l4 Coverage Results" MODIFIED="1584722246294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/leetcode_test$v40.coverage" NAME="v40 Coverage Results" MODIFIED="1584671729891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/leetcode_test$l863.coverage" NAME="l863 Coverage Results" MODIFIED="1584495689268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
+    <SUITE FILE_PATH="coverage/leetcode_test$l365.coverage" NAME="l365 Coverage Results" MODIFIED="1584801624901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
     <SUITE FILE_PATH="coverage/leetcode_test$l1160.coverage" NAME="l1160 Coverage Results" MODIFIED="1584409369751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode" />
   </component>
 </project>
