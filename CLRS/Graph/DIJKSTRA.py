@@ -1,37 +1,8 @@
-class G(object):
-    def __init__(self):
-        self.Adj = {}
+from CLRS.Graph import init_g
+from CLRS.Graph.COMMON import *
 
-    def add(self, v, e):
-        if e:
-            if v not in self.Adj:
-                self.Adj[v] = {e[0]: e[1]}
-            else:
-                self.Adj[v][e[0]] = e[1]
-        else:
-            if v not in self.Adj:
-                self.Adj[v] = {}
-            else:
-                self.Adj[v][e[0]] = e[1]
-
-
-parent = {}
-distance = {}
 S = set()
 Q = {}
-
-
-def INITIALIZE_SINGLE_SOURCE(Adj, s):
-    for k in Adj.keys():
-        distance[k] = float('inf')
-        parent[k] = None
-    distance[s] = 0
-
-
-def RELAX(u, v, Adj):
-    if distance[v] > distance[u] + Adj[u][v]:
-        distance[v] = distance[u] + Adj[u][v]
-        parent[v] = u
 
 
 def EXTRACT_MIN(Q):
@@ -57,17 +28,5 @@ def DIJKSTRA(G, s):
 
 
 if __name__ == '__main__':
-    g = G()
-    g.add('s', ('a', 3))
-    g.add('s', ('c', 5))
-    g.add('s', ('e', 2))
-    g.add('a', ('b', 4))
-    g.add('c', ('d', 6))
-    g.add('d', ('c', 3))
-    g.add('d', ('g', 8))
-    g.add('b', ('g', 4))
-    g.add('e', ('f', 3))
-    g.add('f', ('e', 6))
-    g.add('f', ('g', 7))
-    g.add('g', ())
+    g = init_g()
     print(DIJKSTRA(g, 's'))
