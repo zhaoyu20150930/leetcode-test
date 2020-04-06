@@ -17,6 +17,6 @@ def PARTITION(A, p, r):
 
 
 if __name__ == '__main__':
-    A = [1, 3, 2, 5, 4, 6, 9, 10]
+    A = list(range(10000))
     QUICK_SORT(A, 0, len(A) - 1)
     print(A)
