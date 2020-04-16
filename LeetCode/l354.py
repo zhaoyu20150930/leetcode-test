@@ -26,7 +26,16 @@ T(n) = max(T(n-1)) + 1
 
 class Solution:
     def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
-        pass
+        A = [0 for _ in range(0, len(envelopes))]
+        envelopes.sort(key=lambda x: x[0])
+        for i in range(0, len(envelopes)):
+            for j in range(0, len(envelopes)):
+                if envelopes[i][0] > envelopes[j][0] and envelopes[i][1] > envelopes[j][1]:
+                    if A[j] + 1 > A[i]:
+                        A[i] = A[j] + 1
+                if envelopes[i][0] <= envelopes[j][0]:
+                    break
+        return max(A) + 1 if A else 0
 
 
 if __name__ == '__main__':
